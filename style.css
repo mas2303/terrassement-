@@ -22,6 +22,8 @@ body {
 	background: rgb(255, 255, 255);
 	color: hsl(0 0% 90%);
 	overflow-x: hidden;
+	margin-bottom: 0 !important;
+	padding-bottom: 0 !important;
 }
 
 .explication, .contact-zone {
@@ -39,13 +41,16 @@ body {
   flex-direction: column;
   align-items: center;
   opacity: 1 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 .explication {
-  padding: 64px 0 0 0;
-  border-bottom: 1px solid #eee;
-  align-items: center;
-  text-align: center;
   background: #fff !important;
+  min-height: unset !important;
+  height: auto !important;
+  padding-top: 18px !important;
+  padding-bottom: 18px !important;
+  display: block !important;
 }
 .explication h2 {
   font-size: 2.2em;
@@ -64,7 +69,8 @@ body {
   padding: 32px 0 64px 0;
   border-radius: 0 0 18px 18px;
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.06);
-  margin-bottom: 32px;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
   align-items: center;
   text-align: center;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
@@ -140,6 +146,7 @@ body {
   align-items: stretch;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
   margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .contact-form input,
@@ -673,6 +680,8 @@ main.hidden {
 main {
   opacity: 1;
   transition: opacity 0.7s;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 #logo-container,

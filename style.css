@@ -86,6 +86,44 @@ body {
   flex-wrap: wrap;
 }
 
+.contact-infos {
+  flex: 1 1 260px;
+  min-width: 220px;
+  font-size: 1.1em;
+  color: #222;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  margin-top: 0;
+  font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-infos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-infos li {
+  margin-bottom: 18px;
+  font-size: 1.08em;
+  line-height: 1.5;
+}
+
+.contact-infos a {
+  color: #0077cc;
+  text-decoration: none;
+  word-break: break-all;
+  font-weight: 500;
+}
+.contact-infos a:hover {
+  text-decoration: underline;
+}
+
 .contact-form {
   flex: 1 1 340px;
   min-width: 280px;
@@ -99,6 +137,7 @@ body {
   align-items: stretch;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -143,44 +182,6 @@ body {
   background: linear-gradient(90deg, #005fa3 0%, #009bb8 100%);
   color: #fff;
   box-shadow: 0 4px 16px 0 rgba(0,119,204,0.10);
-}
-
-.contact-infos {
-  flex: 1 1 260px;
-  min-width: 220px;
-  font-size: 1.1em;
-  color: #222;
-  background: #f7f7f7;
-  border-radius: 12px;
-  padding: 28px 24px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
-  margin-top: 0;
-  font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.contact-infos ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.contact-infos li {
-  margin-bottom: 18px;
-  font-size: 1.08em;
-  line-height: 1.5;
-}
-
-.contact-infos a {
-  color: #0077cc;
-  text-decoration: none;
-  word-break: break-all;
-  font-weight: 500;
-}
-.contact-infos a:hover {
-  text-decoration: underline;
 }
 
 /* Styles essentiels pour le nav et le logo */

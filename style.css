@@ -695,50 +695,24 @@ main {
 }
 
 @media (max-width: 600px) {
-  /* Désactive toutes les transitions/animations sauf celles du logo */
-  body *,
-  body *:before,
-  body *:after {
-    transition: none !important;
-    animation: none !important;
+  #logo-container {
+    align-items: center !important;
+    justify-content: center !important;
   }
-  #logo-container,
-  #logo-container *,
-  #logo-intro {
-    transition: initial !important;
-    animation: initial !important;
+  #logo-container.shrink {
+    background: transparent;
   }
-  body {
-    font-size: 1em;
-    padding: 0;
+  #logo-container.shrink #logo-intro {
+    transform: translateY(-32vh) scale(0.28);
+    width: 60vw;
+    max-width: 220px;
+    min-width: 80px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: block;
   }
-  nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0.5rem;
-    height: auto;
-  }
-  nav a.logo {
-    height: 64px;
-    padding: 0;
-  }
-  nav a.logo img {
-    height: 48px;
-    max-width: 80vw;
-  }
-  .site-nav {
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem 0;
-  }
-  .content {
-    width: 100vw;
-    min-width: 0;
-    padding: 0.5rem 0.5rem;
-    position: static;
-  }
-  section,
-  article {
+  section, article {
     width: 100vw !important;
     max-width: 100vw !important;
     min-width: 0 !important;

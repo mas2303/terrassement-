@@ -186,6 +186,6 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelector('main').classList.remove('hidden');
             document.body.style.overflow = '';
         }, 1000);
-    }, 1600);
+    }, 800);
 });
 

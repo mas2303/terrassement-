@@ -810,6 +810,33 @@ main {
     right: 0;
     display: block;
   }
+  .mobile-fond1 {
+    background: url('image/fond1.jpg') center center / cover no-repeat !important;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mobile-fond2 {
+    background: url('image/fond2.jpg') center center / cover no-repeat !important;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .explication {
+    background: #fff !important;
+  }
+  #logo-container.shrink #logo-intro {
+    transform: translate(calc(-50vw + 48px), calc(-50vh + 55px)) scale(0.18) !important;
+    width: 480px;
+    margin: 0;
+    left: auto;
+    right: auto;
+    display: block;
+  }
 }
 
 /* Responsive display for desktop/mobile blocks */

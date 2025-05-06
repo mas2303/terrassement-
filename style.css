@@ -792,6 +792,18 @@ main {
     padding: 18px 0;
     border-radius: 30px;
   }
+  /* Allègement des transitions/animations sur mobile (hors logo) */
+  .fixed img,
+  section:first-of-type img,
+  .content,
+  .site-nav,
+  main,
+  section,
+  article {
+    transition: none !important;
+    animation: none !important;
+  }
+  /* L'animation du logo reste inchangée */
 }
 
 

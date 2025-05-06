@@ -115,13 +115,14 @@ body {
 }
 
 .contact-infos a {
-  color: #0077cc;
+  color: #222;
   text-decoration: none;
   word-break: break-all;
   font-weight: 500;
 }
 .contact-infos a:hover {
   text-decoration: underline;
+  color: #222;
 }
 
 .contact-form {

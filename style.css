@@ -897,7 +897,9 @@ main {
 
 @media (min-width: 601px) {
   .contact-zone,
-  .contact-form,
+  .contact-form {
+    margin-bottom: 12px !important;
+  }
   .contact-content,
   main,
   body {

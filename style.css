@@ -19,7 +19,7 @@ body {
 	min-height: 100vh;
 	font-family:  "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 	font-weight: 80;
-	background: black;
+	background: rgb(255, 255, 255);
 	color: hsl(0 0% 90%);
 	overflow-x: hidden;
 }
@@ -828,6 +828,11 @@ main {
   }
   .explication {
     background: #fff !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding-top: 18px !important;
+    padding-bottom: 18px !important;
+    display: block !important;
   }
   #logo-container.shrink #logo-intro {
     transform: translate(calc(-50vw + 48px), calc(-50vh + 55px)) scale(0.18) !important;
@@ -836,6 +841,23 @@ main {
     left: auto;
     right: auto;
     display: block;
+  }
+  .mobile-fond1 .content {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .mobile-fond1 h1, .mobile-fond1 p {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-zone,
+  .contact-form {
+    margin-bottom: 0 !important;
   }
 }
 

@@ -695,6 +695,19 @@ main {
 }
 
 @media (max-width: 600px) {
+  /* Désactive toutes les transitions/animations sauf celles du logo */
+  body *,
+  body *:before,
+  body *:after {
+    transition: none !important;
+    animation: none !important;
+  }
+  #logo-container,
+  #logo-container *,
+  #logo-intro {
+    transition: initial !important;
+    animation: initial !important;
+  }
   body {
     font-size: 1em;
     padding: 0;

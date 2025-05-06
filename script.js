@@ -1,6 +1,9 @@
 import gsap from 'https://cdn.skypack.dev/gsap@3.12.2';
 import { ScrollTrigger } from 'https://cdn.skypack.dev/gsap@3.12.2/ScrollTrigger';
 
+// Détection mobile
+const isMobile = window.matchMedia('(max-width: 600px)').matches;
+
 if (!CSS.supports('animation-timeline: view()') && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
   gsap.registerPlugin(ScrollTrigger);
   // Set up all the scroll animations with ScrollTrigger instead.
@@ -162,19 +165,26 @@ window.addEventListener('scroll', function() {
     }
 });
 
-window.addEventListener('scroll', function() {
-    const explication = document.querySelector('.explication-contact');
-    if (!explication) return;
-    const rect = explication.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-        // On est sur la section explication-contact, on passe tous les .fixed en static
-        document.querySelectorAll('.fixed').forEach(el => {
-            el.style.position = 'static';
-            el.style.zIndex = '1';
-        });
-    }
-});
+// --- Animations scroll et effets spéciaux ---
+if (!isMobile) {
+  // Place ici tout le code d'animation/scroll qui ne doit PAS s'exécuter sur mobile
+  // (exemple : GSAP, ScrollTrigger, scroll events, etc.)
 
+  window.addEventListener('scroll', function() {
+      const explication = document.querySelector('.explication-contact');
+      if (!explication) return;
+      const rect = explication.getBoundingClientRect();
+      if (rect.top < window.innerHeight && rect.bottom > 0) {
+          // On est sur la section explication-contact, on passe tous les .fixed en static
+          document.querySelectorAll('.fixed').forEach(el => {
+              el.style.position = 'static';
+              el.style.zIndex = '1';
+          });
+      }
+  });
+}
+
+// --- Animation du logo d'intro (toujours active) ---
 window.addEventListener('DOMContentLoaded', function() {
     document.body.classList.add('logo-anim');
     document.body.style.overflow = 'hidden';

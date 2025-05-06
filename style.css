@@ -646,7 +646,7 @@ section:nth-of-type(2) article:nth-of-type(3) img {
   pointer-events: none;
 }
 #logo-intro {
-  width: 320px;
+  width: 480px;
   height: auto;
   transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1);
   will-change: transform;

@@ -79,8 +79,8 @@ body {
 }
 .contact-content {
   display: flex;
-  flex-direction: row-reverse;
-  gap: 40px;
+  flex-direction: row;
+  gap: 56px;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -95,7 +95,7 @@ body {
   padding: 32px 28px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 32px;
   align-items: stretch;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }

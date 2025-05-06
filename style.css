@@ -705,9 +705,13 @@ main {
     padding: 0.5rem 0.5rem;
     height: auto;
   }
-  nav a.logo img {
+  nav a.logo {
     height: 64px;
-    max-width: 90vw;
+    padding: 0;
+  }
+  nav a.logo img {
+    height: 48px;
+    max-width: 80vw;
   }
   .site-nav {
     flex-direction: column;
@@ -726,91 +730,18 @@ main {
     min-height: unset;
   }
   h1, h2 {
-    font-size: 1.5em !important;
+    font-size: 1.3em !important;
     text-align: center;
     word-break: break-word;
+    margin: 0.5em 0;
   }
-  .fixed img,
-  section:first-of-type img {
+  section:first-of-type .fixed img,
+  .fixed img {
     width: 100vw;
-    height: 40vw;
-    min-height: 120px;
+    height: 32vw;
+    min-height: 100px;
     object-fit: cover;
     left: 0;
-    translate: 0 0;
-    border-radius: 0;
-  }
-  .explication, .contact-zone {
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-  .explication h2, .contact-zone h2 {
-    font-size: 1.2em;
-    margin-bottom: 12px;
-  }
-  .explication p {
-    font-size: 1em;
-    padding: 0 2vw;
-  }
-  section, .explication, .contact-zone {
-    margin-bottom: 24px;
-  }
-  .contact-content {
-    flex-direction: column;
-    gap: 32px;
-    align-items: stretch;
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .contact-infos, .contact-form {
-    min-width: 0;
-    width: 100%;
-    max-width: 100%;
-    padding: 18px 6vw;
-    box-sizing: border-box;
-    border-radius: 12px;
-  }
-  .contact-infos {
-    font-size: 1em;
-    padding-bottom: 8px;
-  }
-  .contact-form {
-    padding-top: 8px;
-    padding-bottom: 18px;
-    gap: 24px;
-  }
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 1.08em;
-    padding: 16px 14px;
-    border-radius: 10px;
-  }
-  .contact-form button {
-    font-size: 1.1em;
-    padding: 18px 0;
-    border-radius: 30px;
-  }
-  /* Allègement des transitions/animations sur mobile (hors logo) */
-  .fixed img,
-  section:first-of-type img,
-  .content,
-  .site-nav,
-  main,
-  section,
-  article {
-    transition: none !important;
-    animation: none !important;
-  }
-  /* L'animation du logo reste inchangée */
-  section:first-of-type .fixed img {
-    width: 100vw;
-    height: 40vh;
-    min-height: 120px;
-    object-fit: cover;
-    left: 0;
-    top: 0;
     translate: 0 0;
     border-radius: 0;
     position: relative;
@@ -819,52 +750,31 @@ main {
   }
   section:first-of-type .fixed {
     position: relative !important;
-    min-height: 40vh;
+    min-height: 32vw;
     height: auto;
     z-index: 2;
   }
   section:first-of-type .content {
     position: relative;
     z-index: 3;
-    padding: 1.5rem 0.5rem;
+    padding: 1.2rem 0.5rem;
     width: 100vw;
     max-width: 100vw;
-  }
-  .fixed {
-    position: relative !important;
-    z-index: 1 !important;
-  }
-  .explication, .contact-zone, .contact-infos, .contact-form {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    padding-left: 4vw !important;
-    padding-right: 4vw !important;
-    border-radius: 8px !important;
-    box-sizing: border-box;
-  }
-  .explication, .contact-zone {
     text-align: center;
-    font-size: 1em;
-    margin-bottom: 18px;
-    padding-top: 18px;
-    padding-bottom: 18px;
   }
-  .explication h2, .contact-zone h2 {
-    font-size: 1.15em;
-    margin-bottom: 10px;
-  }
-  .explication p {
+  section:first-of-type p {
     font-size: 1em;
     padding: 0 2vw;
+    text-align: center;
   }
-  .contact-infos, .contact-form {
-    margin-bottom: 14px;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    font-size: 1em;
+  .explication, .contact-zone {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  section, .explication, .contact-zone {
+    margin-bottom: 18px;
   }
 }
 

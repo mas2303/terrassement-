@@ -812,6 +812,23 @@ main {
   }
 }
 
+/* Responsive display for desktop/mobile blocks */
+.only-desktop {
+  display: block;
+}
+.only-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .only-desktop {
+    display: none !important;
+  }
+  .only-mobile {
+    display: block !important;
+  }
+}
+
 
 
 

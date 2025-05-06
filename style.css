@@ -906,6 +906,15 @@ main {
     min-height: unset !important;
     height: auto !important;
   }
+  .contact-content {
+    align-items: flex-start !important;
+    flex-direction: row !important;
+    height: auto !important;
+  }
+  .contact-zone {
+    display: block !important;
+    height: auto !important;
+  }
 }
 
 

@@ -570,34 +570,26 @@ section:nth-of-type(2) article:nth-of-type(3) img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 20000;
-  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: background 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 #logo-intro {
   width: 320px;
   height: auto;
-  transition: all 1s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: transform 1s cubic-bezier(0.77, 0, 0.175, 1), width 1s cubic-bezier(0.77, 0, 0.175, 1);
 }
 #logo-container.shrink {
-  width: 110px;
-  height: 110px;
   background: transparent;
-  top: 24px;
-  left: 32px;
-  border-radius: 16px;
-  box-shadow: none;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 0;
 }
 #logo-container.shrink #logo-intro {
-  width: 60px;
+  transform: translate(calc(-50vw + 62px), calc(-50vh + 55px)) scale(0.19);
+  width: 320px;
 }
 .site-nav.hidden,
 main.hidden {

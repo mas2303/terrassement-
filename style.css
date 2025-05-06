@@ -114,15 +114,16 @@ body {
   line-height: 1.5;
 }
 
-.contact-infos a {
-  color: #222;
+.contact-infos a,
+.contact-infos a:visited,
+.contact-infos a:active,
+.contact-infos a:focus {
+  color: #222 !important;
   text-decoration: none;
-  word-break: break-all;
-  font-weight: 500;
 }
 .contact-infos a:hover {
+  color: #222 !important;
   text-decoration: underline;
-  color: #222;
 }
 
 .contact-form {
@@ -164,9 +165,9 @@ body {
   min-height: 110px;
 }
 .contact-form button {
-  background: linear-gradient(90deg, #0077cc 0%, #00b4d8 100%);
-  color: #fff;
-  border: none;
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #bbb;
   border-radius: 30px;
   padding: 18px 0;
   font-size: 1.15em;
@@ -174,15 +175,16 @@ body {
   width: 100%;
   max-width: 100%;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   margin-top: 8px;
   letter-spacing: 0.03em;
 }
 .contact-form button:hover {
-  background: linear-gradient(90deg, #005fa3 0%, #009bb8 100%);
-  color: #fff;
-  box-shadow: 0 4px 16px 0 rgba(0,119,204,0.10);
+  background: #f2f2f2;
+  color: #222;
+  border: 1.5px solid #888;
+  box-shadow: 0 4px 16px 0 rgba(0,0,0,0.10);
 }
 
 /* Styles essentiels pour le nav et le logo */
@@ -689,6 +691,106 @@ main {
     max-width: 100%;
     padding-left: 10px;
     padding-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 1em;
+    padding: 0;
+  }
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    height: auto;
+  }
+  nav a.logo img {
+    height: 64px;
+    max-width: 90vw;
+  }
+  .site-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+  .content {
+    width: 100vw;
+    min-width: 0;
+    padding: 0.5rem 0.5rem;
+    position: static;
+  }
+  section,
+  article {
+    padding: 0.5rem 0.5rem;
+    min-height: unset;
+  }
+  h1, h2 {
+    font-size: 1.5em !important;
+    text-align: center;
+    word-break: break-word;
+  }
+  .fixed img,
+  section:first-of-type img {
+    width: 100vw;
+    height: 40vw;
+    min-height: 120px;
+    object-fit: cover;
+    left: 0;
+    translate: 0 0;
+    border-radius: 0;
+  }
+  .explication, .contact-zone {
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .explication h2, .contact-zone h2 {
+    font-size: 1.2em;
+    margin-bottom: 12px;
+  }
+  .explication p {
+    font-size: 1em;
+    padding: 0 2vw;
+  }
+  section, .explication, .contact-zone {
+    margin-bottom: 24px;
+  }
+  .contact-content {
+    flex-direction: column;
+    gap: 32px;
+    align-items: stretch;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contact-infos, .contact-form {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 18px 6vw;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .contact-infos {
+    font-size: 1em;
+    padding-bottom: 8px;
+  }
+  .contact-form {
+    padding-top: 8px;
+    padding-bottom: 18px;
+    gap: 24px;
+  }
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1.08em;
+    padding: 16px 14px;
+    border-radius: 10px;
+  }
+  .contact-form button {
+    font-size: 1.1em;
+    padding: 18px 0;
+    border-radius: 30px;
   }
 }
 

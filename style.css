@@ -77,15 +77,51 @@ body {
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 
 }
-.contact-form {
-  width: 100%;
-  max-width: 400px;
+.contact-content {
   display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  flex: 1 1 320px;
+  min-width: 260px;
+}
+
+.contact-infos {
+  flex: 1 1 260px;
+  min-width: 220px;
+  font-size: 1.1em;
+  color: #222;
+  background: #f7f7f7;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.04);
+  margin-top: 0;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }
+
+.contact-infos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-infos li {
+  margin-bottom: 14px;
+}
+
+.contact-infos a {
+  color: #0077cc;
+  text-decoration: none;
+  word-break: break-all;
+}
+.contact-infos a:hover {
+  text-decoration: underline;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;
@@ -612,6 +648,17 @@ main {
 #logo-container.shrink,
 #logo-container.shrink #logo-intro {
   transition: all 1s cubic-bezier(0.77, 0, 0.175, 1) !important;
+}
+
+@media (max-width: 700px) {
+  .contact-content {
+    flex-direction: column;
+    gap: 24px;
+    align-items: stretch;
+  }
+  .contact-infos {
+    margin-top: 0;
+  }
 }
 
 

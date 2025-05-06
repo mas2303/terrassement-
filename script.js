@@ -176,6 +176,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
+    document.body.classList.add('logo-anim');
     document.body.style.overflow = 'hidden';
     setTimeout(function() {
         const logoContainer = document.getElementById('logo-container');
@@ -185,7 +186,18 @@ window.addEventListener('DOMContentLoaded', function() {
             document.querySelector('.site-nav').classList.remove('hidden');
             document.querySelector('main').classList.remove('hidden');
             document.body.style.overflow = '';
+            document.body.classList.remove('logo-anim');
         }, 1000);
     }, 800);
+
+    // Empêche le rechargement du formulaire de contact et affiche un message
+    const contactForm = document.querySelector('.contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Merci pour votre message !');
+            contactForm.reset();
+        });
+    }
 });
 

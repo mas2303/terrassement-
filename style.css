@@ -896,10 +896,13 @@ main {
 }
 
 @media (min-width: 601px) {
-  .contact-zone,
-  .contact-form {
-    margin-bottom: 12px !important;
+  .contact-content-wrapper {
+    margin-bottom: 6px !important;
+    width: 100%;
+    display: block;
   }
+  .contact-zone,
+  .contact-form,
   .contact-content,
   main,
   body {
@@ -908,22 +911,8 @@ main {
     min-height: unset !important;
     height: auto !important;
   }
-  .contact-content {
-    align-items: flex-start !important;
-    flex-direction: row !important;
-    height: auto !important;
-  }
-  .contact-zone {
-    display: block !important;
-    height: auto !important;
-  }
-  .contact-form {
-    margin-bottom: 12px !important;
-  }
-  .contact-content-wrapper {
-    margin-bottom: 12px !important;
-    width: 100%;
-    display: block;
+  .contact-form button {
+    margin-top: 16px !important;
   }
 }
 

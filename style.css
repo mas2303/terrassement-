@@ -51,6 +51,12 @@ body {
   padding-top: 18px !important;
   padding-bottom: 18px !important;
   display: block !important;
+  text-align: center !important;
+}
+.explication h2, .explication p {
+  text-align: center !important;
+  margin-left: auto;
+  margin-right: auto;
 }
 .explication h2 {
   font-size: 2.2em;
@@ -886,6 +892,19 @@ main {
   }
   .only-mobile {
     display: block !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .contact-zone,
+  .contact-form,
+  .contact-content,
+  main,
+  body {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: unset !important;
+    height: auto !important;
   }
 }
 

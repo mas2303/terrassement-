@@ -192,7 +192,8 @@ body {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-  margin-top: 8px;
+  margin-top: 16px !important;
+  margin-bottom: 0 !important;
   letter-spacing: 0.03em;
 }
 .contact-form button:hover {
@@ -920,6 +921,23 @@ main {
   height: 12px;
   width: 100%;
   display: block;
+}
+
+.contact-zone,
+.contact-content-wrapper,
+.contact-content,
+.contact-form,
+main,
+body,
+section.contact-zone {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: unset !important;
+  height: auto !important;
+}
+.contact-form button {
+  margin-bottom: 0 !important;
+  margin-top: 16px !important;
 }
 
 

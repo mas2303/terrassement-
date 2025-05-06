@@ -917,6 +917,9 @@ main {
     display: block !important;
     height: auto !important;
   }
+  .contact-form {
+    margin-bottom: 12px !important;
+  }
 }
 
 .after-form-spacer {

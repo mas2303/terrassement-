@@ -80,7 +80,7 @@ body {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  font-family: inherit;
+  font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }
 .contact-form input,
 .contact-form textarea {
@@ -92,7 +92,7 @@ body {
   color: #222;
   border-radius: 8px;
   font-size: 1em;
-  font-family: inherit;
+  font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
   resize: none;
 }
 .contact-form textarea {
@@ -111,7 +111,7 @@ body {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.06);
-  font-family: inherit;
+  font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }
 .contact-form button:hover {
   background: #e0e0e0;

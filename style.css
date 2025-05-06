@@ -825,6 +825,17 @@ main {
     text-align: center;
     min-height: 0;
   }
+  #logo-container.shrink {
+    background: transparent;
+  }
+  #logo-container.shrink #logo-intro {
+    transform: translateY(-38vh) scale(0.22);
+    width: 480px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    display: block;
+  }
 }
 
 

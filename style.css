@@ -919,6 +919,12 @@ main {
   }
 }
 
+.after-form-spacer {
+  height: 12px;
+  width: 100%;
+  display: block;
+}
+
 
 
 

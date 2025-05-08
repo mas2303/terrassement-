@@ -45,16 +45,18 @@ body {
   padding-bottom: 0;
 }
 .explication {
-  background: #fff;
-  min-height: unset;
-  height: auto;
-  padding-top: 18px;
-  padding-bottom: 18px;
-  display: block;
-  text-align: center;
+  background: #fff !important;
+  min-height: unset !important;
+  height: auto !important;
+  padding: 0 0 18px 0 !important;
+  display: block !important;
+  text-align: center !important;
+  margin: 0 !important;
+  position: relative !important;
+  z-index: 10001 !important;
 }
 .explication h2, .explication p {
-  text-align: center;
+  text-align: center !important;
   margin-left: auto;
   margin-right: auto;
 }
@@ -72,21 +74,23 @@ body {
   color: #333;
 }
 .contact-zone {
-  padding: 32px 0 64px 0;
-  border-radius: 0 0 18px 18px;
-  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.06);
-  margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 32px 0 120px 0 !important;
+  margin: 0;
+  position: relative;
+  z-index: 10001;
+  background: #fff !important;
   align-items: center;
   text-align: center;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
 }
 .contact-zone h2 {
   font-size: 2em;
-  margin-bottom: 18px;
+  margin: 0 auto 18px auto;
   color: #1a1a1a;
   letter-spacing: -1px;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+  text-align: center;
+  width: 100%;
 }
 .contact-content {
   display: flex;
@@ -191,7 +195,7 @@ body {
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
   margin-top: 16px;
-  margin-bottom: 0;
+  margin-bottom: 32px;
   letter-spacing: 0.03em;
 }
 .contact-form button:hover {
@@ -711,6 +715,72 @@ main {
 }
 
 @media (max-width: 600px) {
+  section, article {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  section:first-of-type {
+    min-height: 100vh !important;
+    height: 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+    overflow: hidden;
+  }
+  .explication {
+    background: #fff !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 0 18px 0 !important;
+    display: block !important;
+    text-align: center !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 10001 !important;
+    width: 100vw !important;
+  }
+  .explication h2, .explication p {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+  .contact-zone {
+    padding: 32px 0 64px 0 !important;
+    margin: 0 !important;
+    background: #fff !important;
+    position: relative !important;
+    z-index: 10001 !important;
+    width: 100vw !important;
+  }
+  .contact-zone h2 {
+    font-size: 2em !important;
+    margin: 0 auto 18px auto !important;
+    color: #1a1a1a !important;
+    letter-spacing: -1px !important;
+    font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .contact-content {
+    gap: 28px;
+    padding: 0 16px;
+    width: 100%;
+  }
+  .contact-form, .contact-infos {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
+  }
+  .contact-form button {
+    margin-bottom: 32px;
+  }
   #logo-container {
     align-items: center !important;
     justify-content: center !important;
@@ -727,15 +797,6 @@ main {
     left: 0;
     right: 0;
     display: block;
-  }
-  section, article {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    min-width: 0 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    box-sizing: border-box;
-    text-align: center;
   }
   .static, .fixed {
     position: relative !important;
@@ -808,6 +869,7 @@ main {
     height: auto !important;
     padding: 0 0 18px 0 !important;
     display: block !important;
+    text-align: center !important;
     margin: 0 !important;
     position: relative !important;
     z-index: 10001 !important;
@@ -930,6 +992,7 @@ main {
     margin: 0;
     position: relative;
     z-index: 10001;
+    background: #fff !important;
   }
   .contact-form,
   .contact-content,
@@ -942,6 +1005,7 @@ main {
   }
   .contact-form button {
     margin-top: 16px;
+    margin-bottom: 32px;
   }
 }
 

@@ -11,8 +11,8 @@
 
 /* Désactive totalement le scroll-snap sur tout le site */
 html, body, section, .explication, .contact-zone, .explication ~ section, .contact-zone ~ section, .explication ~ *, .contact-zone ~ * {
-    scroll-snap-type: none !important;
-    scroll-snap-align: none !important;
+    scroll-snap-type: none;
+    scroll-snap-align: none;
 }
 
 body {
@@ -22,8 +22,8 @@ body {
 	background: rgb(255, 255, 255);
 	color: hsl(0 0% 90%);
 	overflow-x: hidden;
-	margin-bottom: 0 !important;
-	padding-bottom: 0 !important;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .explication, .contact-zone {
@@ -35,26 +35,26 @@ body {
   margin: 0 auto;
   padding-left: 0;
   padding-right: 0;
-  position: relative !important;
-  z-index: 10001 !important;
-  display: flex !important;
+  position: relative;
+  z-index: 10001;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  opacity: 1 !important;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  opacity: 1;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 .explication {
-  background: #fff !important;
-  min-height: unset !important;
-  height: auto !important;
-  padding-top: 18px !important;
-  padding-bottom: 18px !important;
-  display: block !important;
-  text-align: center !important;
+  background: #fff;
+  min-height: unset;
+  height: auto;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  display: block;
+  text-align: center;
 }
 .explication h2, .explication p {
-  text-align: center !important;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
 }
@@ -75,12 +75,11 @@ body {
   padding: 32px 0 64px 0;
   border-radius: 0 0 18px 18px;
   box-shadow: 0 4px 32px 0 rgba(0,0,0,0.06);
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
   align-items: center;
   text-align: center;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-
 }
 .contact-zone h2 {
   font-size: 2em;
@@ -88,7 +87,6 @@ body {
   color: #1a1a1a;
   letter-spacing: -1px;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-
 }
 .contact-content {
   display: flex;
@@ -151,8 +149,8 @@ body {
   gap: 32px;
   align-items: stretch;
   font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .contact-form input,
@@ -192,8 +190,8 @@ body {
   cursor: pointer;
   transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-  margin-top: 16px !important;
-  margin-bottom: 0 !important;
+  margin-top: 16px;
+  margin-bottom: 0;
   letter-spacing: 0.03em;
 }
 .contact-form button:hover {
@@ -687,8 +685,8 @@ main.hidden {
 main {
   opacity: 1;
   transition: opacity 0.7s;
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #logo-container,
@@ -735,7 +733,7 @@ main {
     max-width: 100vw !important;
     min-width: 0 !important;
     margin: 0 !important;
-    padding: 1.2rem 0.5rem !important;
+    padding: 0 !important;
     box-sizing: border-box;
     text-align: center;
   }
@@ -816,6 +814,7 @@ main {
     padding: 1.2rem 0.5rem;
     text-align: center;
     min-height: 0;
+    margin: 0;
   }
   #logo-container.shrink {
     background: transparent;
@@ -835,6 +834,17 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  .mobile-fond1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
   .mobile-fond2 {
     background: url('image/fond2.jpg') center center / cover no-repeat !important;
@@ -843,14 +853,54 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+  }
+  .mobile-fond2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
   }
   .explication {
-    background: #fff !important;
-    min-height: unset !important;
-    height: auto !important;
-    padding-top: 18px !important;
-    padding-bottom: 18px !important;
-    display: block !important;
+    background: #fff;
+    min-height: unset;
+    height: auto;
+    padding: 0 0 18px 0;
+    display: block;
+    margin: 0;
+  }
+  .explication h2 {
+    font-size: 2.2em;
+    margin: 0 0 18px 0;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+  }
+  .explication p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .contact-zone {
+    padding: 32px 0 64px 0;
+    margin: 0;
+  }
+  .contact-content {
+    gap: 28px;
+    padding: 0 16px;
+  }
+  .contact-form, .contact-infos {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
   }
   #logo-container.shrink #logo-intro {
     transform: translate(calc(-50vw + 48px), calc(-50vh + 55px)) scale(0.18) !important;
@@ -867,6 +917,8 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
+    z-index: 2;
   }
   .mobile-fond1 h1, .mobile-fond1 p {
     text-align: center !important;
@@ -898,7 +950,7 @@ main {
 
 @media (min-width: 601px) {
   .contact-content-wrapper {
-    margin-bottom: 6px !important;
+    margin-bottom: 6px;
     width: 100%;
     display: block;
   }
@@ -907,13 +959,16 @@ main {
   .contact-content,
   main,
   body {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-    min-height: unset !important;
-    height: auto !important;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    min-height: unset;
+    height: auto;
   }
   .contact-form button {
-    margin-top: 16px !important;
+    margin-top: 16px;
+  }
+  .contact-zone {
+    padding-bottom: 80px;
   }
 }
 
@@ -927,17 +982,18 @@ main {
 .contact-content-wrapper,
 .contact-content,
 .contact-form,
+section.contact-zone,
 main,
-body,
-section.contact-zone {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  min-height: unset !important;
-  height: auto !important;
+body {
+  min-height: unset;
+  height: auto;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  align-items: flex-start;
 }
 .contact-form button {
-  margin-bottom: 0 !important;
-  margin-top: 16px !important;
+  margin-bottom: 0;
+  margin-top: 16px;
 }
 
 

@@ -22,7 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Cacher le logo et montrer le contenu après l'animation
             setTimeout(function() {
                 if (logoContainer) logoContainer.style.display = 'none';
-                if (main) main.classList.remove('hidden');
+                if (main) {
+                    main.classList.remove('hidden');
+                    // Ajouter un petit délai avant de montrer le contenu
+                    setTimeout(() => {
+                        main.classList.add('visible');
+                    }, 100);
+                }
                 if (nav) nav.classList.remove('hidden');
                 document.body.classList.remove('logo-anim');
                 console.log('Animation logo terminée');

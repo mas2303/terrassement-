@@ -70,6 +70,8 @@ nav a.logo img {
 
 .hidden {
   display: none !important;
+  opacity: 0;
+  transform: translateY(30px);
 }
 
 body.logo-anim {
@@ -409,25 +411,25 @@ section:nth-of-type(2) article .content h2 {
   .contact-content {
     flex-direction: column;
     gap: 30px;
-  }
-  
+}
+
   .contact-content-wrapper {
     padding: 20px;
-  }
-  
+}
+
   .contact-infos,
   .contact-form {
     padding: 20px;
-  }
-  
+}
+
   .contact-infos li {
     font-size: 1rem;
-  }
+}
   
   .contact-form button {
-    width: 100%;
+      width: 100%;
   }
-}
+    }
 
 .contact-content-wrapper {
   max-width: 1200px;
@@ -436,15 +438,15 @@ section:nth-of-type(2) article .content h2 {
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  opacity: 0;
+        opacity: 0;
   transform: translateY(30px);
   transition: all 0.8s ease 0.4s;
-}
+      }
 
 .contact-zone.visible .contact-content-wrapper {
   opacity: 1;
   transform: translateY(0);
-}
+      }
 
 /* Bouton retour en haut */
 .scroll-to-top {
@@ -500,7 +502,7 @@ section:nth-of-type(2) article .content h2 {
   .explication h2,
   .contact-zone h2 {
     font-size: 2rem;
-  }
+}
 
   .explication p {
     font-size: 1.1rem;
@@ -689,6 +691,38 @@ section:nth-of-type(2) article .content h2 {
     font-size: 20px;
     bottom: 20px;
     right: 20px;
+}
+}
+
+main {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+main.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+main.visible section:first-of-type .content h1 {
+  animation: fadeInUp 1s ease 0.3s forwards;
+  opacity: 0;
+}
+
+main.visible section:first-of-type .content p {
+  animation: fadeInUp 1s ease 0.6s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

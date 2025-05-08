@@ -784,27 +784,13 @@ main {
     word-break: break-word;
     margin: 0.5em 0;
   }
-  section:first-of-type,
-  section:first-of-type .fixed {
+  section:first-of-type {
     min-height: 100vh !important;
     height: 100vh !important;
     padding: 0 !important;
     margin: 0 !important;
     position: relative !important;
     overflow: hidden;
-  }
-  section:first-of-type .fixed img {
-    width: 100vw !important;
-    height: 100vh !important;
-    min-height: 100vh !important;
-    min-width: 100vw !important;
-    object-fit: cover !important;
-    object-position: center center !important;
-    position: absolute !important;
-    left: 0;
-    top: 0;
-    z-index: 1;
-    display: block;
   }
   section:first-of-type .content {
     position: relative;
@@ -816,15 +802,51 @@ main {
     min-height: 0;
     margin: 0;
   }
-  #logo-container.shrink {
-    background: transparent;
+  .explication {
+    background: #fff !important;
+    min-height: unset !important;
+    height: auto !important;
+    padding: 0 0 18px 0 !important;
+    display: block !important;
+    margin: 0 !important;
+    position: relative !important;
+    z-index: 10001 !important;
+  }
+  .explication h2 {
+    font-size: 2.2em;
+    margin: 0 0 18px 0;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+  }
+  .explication p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+    text-align: center;
+    color: #333;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+  .contact-zone {
+    padding: 32px 0 64px 0;
+    margin: 0;
+  }
+  .contact-content {
+    gap: 28px;
+    padding: 0 16px;
+  }
+  .contact-form, .contact-infos {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 24px 16px;
   }
   #logo-container.shrink #logo-intro {
-    transform: translateY(-38vh) scale(0.22);
+    transform: translate(calc(-50vw + 48px), calc(-50vh + 55px)) scale(0.18) !important;
     width: 480px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
+    margin: 0;
+    left: auto;
+    right: auto;
     display: block;
   }
   .mobile-fond1 {
@@ -865,69 +887,18 @@ main {
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
-  .explication {
-    background: #fff;
-    min-height: unset;
-    height: auto;
-    padding: 0 0 18px 0;
-    display: block;
-    margin: 0;
-  }
-  .explication h2 {
-    font-size: 2.2em;
-    margin: 0 0 18px 0;
-    color: #1a1a1a;
-    letter-spacing: -1px;
-  }
-  .explication p {
-    font-size: 1.2em;
-    line-height: 1.6;
-    max-width: 600px;
-    text-align: center;
-    color: #333;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-  .contact-zone {
-    padding: 32px 0 64px 0;
-    margin: 0;
-  }
-  .contact-content {
-    gap: 28px;
-    padding: 0 16px;
-  }
-  .contact-form, .contact-infos {
-    min-width: 0;
-    width: 100%;
-    max-width: 100%;
-    padding: 24px 16px;
-  }
-  #logo-container.shrink #logo-intro {
-    transform: translate(calc(-50vw + 48px), calc(-50vh + 55px)) scale(0.18) !important;
-    width: 480px;
-    margin: 0;
-    left: auto;
-    right: auto;
-    display: block;
-  }
-  .mobile-fond1 .content {
-    text-align: center !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    position: relative;
-    z-index: 2;
-  }
-  .mobile-fond1 h1, .mobile-fond1 p {
-    text-align: center !important;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .contact-zone,
   .contact-form {
     margin-bottom: 0 !important;
+  }
+  .contact-zone h2 {
+    font-size: 2em;
+    margin: 0 auto 18px auto;
+    color: #1a1a1a;
+    letter-spacing: -1px;
+    font-family: "Geist Sans", "SF Pro Text", "SF Pro Icons", "AOS Icons", "Helvetica Neue", Helvetica, Arial, sans-serif, system-ui;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -954,7 +925,12 @@ main {
     width: 100%;
     display: block;
   }
-  .contact-zone,
+  .contact-zone {
+    padding: 32px 0 120px 0 !important;
+    margin: 0;
+    position: relative;
+    z-index: 10001;
+  }
   .contact-form,
   .contact-content,
   main,
@@ -966,9 +942,6 @@ main {
   }
   .contact-form button {
     margin-top: 16px;
-  }
-  .contact-zone {
-    padding-bottom: 80px;
   }
 }
 

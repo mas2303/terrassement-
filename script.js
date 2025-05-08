@@ -176,7 +176,7 @@ if (!isMobile) {
       const rect = explication.getBoundingClientRect();
       if (rect.top < window.innerHeight && rect.bottom > 0) {
           // On est sur la section explication-contact, on passe tous les .fixed en static
-          document.querySelectorAll('.fixed').forEach(el => {
+          document.querySelectorAll('.fixed:not(.contact-zone *)').forEach(el => {
               el.style.position = 'static';
               el.style.zIndex = '1';
           });

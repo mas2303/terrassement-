@@ -1,99 +1,56 @@
-// Animation du logo
+// Gestion du formulaire de contact avec Formspree
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM chargé');
-    // Récupération des éléments
-    const logoContainer = document.getElementById('logo-container');
-    const main = document.querySelector('main');
-    const nav = document.querySelector('.site-nav');
+    const form = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
     
-    console.log('Éléments récupérés:', { logoContainer, main, nav });
-    
-    // Cacher le contenu initialement
-    if (main) main.classList.add('hidden');
-    if (nav) nav.classList.add('hidden');
-    
-    // Animation après 1 seconde
-    setTimeout(function() {
-        if (logoContainer) {
-            console.log('Démarrage animation logo');
-            // Ajouter la classe shrink pour déclencher l'animation
-            logoContainer.classList.add('shrink');
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
             
-            // Cacher le logo et montrer le contenu après l'animation
-            setTimeout(function() {
-                if (logoContainer) logoContainer.style.display = 'none';
-                if (main) {
-                    main.classList.remove('hidden');
-                    // Ajouter un petit délai avant de montrer le contenu
-                    setTimeout(() => {
-                        main.classList.add('visible');
-                    }, 100);
+            // Désactiver le bouton et afficher le chargement
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
+            formStatus.textContent = '';
+            formStatus.className = 'form-status';
+            
+            // Récupérer les données du formulaire
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    // Succès
+                    formStatus.textContent = '✅ Message envoyé avec succès ! Nous vous répondrons bientôt.';
+                    formStatus.className = 'form-status success';
+                    form.reset();
+                } else {
+                    // Erreur
+                    const data = await response.json();
+                    if (data.errors) {
+                        formStatus.textContent = '❌ Erreur : ' + data.errors.map(error => error.message).join(', ');
+                    } else {
+                        formStatus.textContent = '❌ Une erreur est survenue. Veuillez réessayer.';
+                    }
+                    formStatus.className = 'form-status error';
                 }
-                if (nav) nav.classList.remove('hidden');
-                document.body.classList.remove('logo-anim');
-                console.log('Animation logo terminée');
-            }, 1000); // Attendre que l'animation soit terminée
-        }
-    }, 1000);
-});
-
-// Gestion des animations au scroll
-function handleScrollAnimations() {
-  const elements = document.querySelectorAll('.explication, .explication h2, .explication p, section:nth-of-type(2) article .fixed, section:nth-of-type(2) article .content, .contact-zone, .contact-zone h2, .contact-content-wrapper, .contact-infos, .contact-form');
-  
-  elements.forEach(element => {
-    const elementTop = element.getBoundingClientRect().top;
-    const elementBottom = element.getBoundingClientRect().bottom;
-    const windowHeight = window.innerHeight;
-    
-    // Si l'élément est visible dans la fenêtre
-    if (elementTop < windowHeight * 0.8 && elementBottom > 0) {
-      if (!element.classList.contains('visible')) {
-        console.log('Élément visible:', element.className);
-        element.classList.add('visible');
-      }
-    } else {
-      if (element.classList.contains('visible')) {
-        console.log('Élément masqué:', element.className);
-        element.classList.remove('visible');
-      }
+            } catch (error) {
+                // Erreur réseau
+                formStatus.textContent = '❌ Erreur de connexion. Vérifiez votre connexion internet.';
+                formStatus.className = 'form-status error';
+            } finally {
+                // Réactiver le bouton
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Envoyer ma demande';
+            }
+        });
     }
-  });
-}
-
-// Ajouter l'écouteur d'événement pour le scroll
-window.addEventListener('scroll', () => {
-  console.log('Scroll détecté');
-  handleScrollAnimations();
 });
 
-// Déclencher une première fois pour les éléments déjà visibles
-handleScrollAnimations();
-
-// Gestion du bouton retour en haut
-const scrollToTopButton = document.querySelector('.scroll-to-top');
-console.log('Bouton retour en haut:', scrollToTopButton);
-
-// Afficher/masquer le bouton selon le scroll
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    if (!scrollToTopButton.classList.contains('visible')) {
-      console.log('Afficher bouton retour en haut');
-      scrollToTopButton.classList.add('visible');
-    }
-  } else {
-    if (scrollToTopButton.classList.contains('visible')) {
-      console.log('Masquer bouton retour en haut');
-      scrollToTopButton.classList.remove('visible');
-    }
-  }
-});
-
-// Animation de retour en haut
-scrollToTopButton.addEventListener('click', () => {
-  console.log('Clic sur bouton retour en haut');
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
